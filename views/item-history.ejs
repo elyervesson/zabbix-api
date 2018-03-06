@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+	</head>
+	<body>
+		<% if (result.length != 0) { %>
+			<h1>Lista de valores para o item(ID) <%= result[0].itemid %></h1>
+			<ul>
+				<% result.forEach(function(val) { %>
+					<li>Valor: <%= val.value %> em <%= val.clock %></li>
+				<% }) %>
+			</ul>
+		<% } %>
+		<% if (result.length === 0) { %>
+			<h1>Nenhum valor foi encontrado</h1>
+		<% } %>
+	</body>
+</html>

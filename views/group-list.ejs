@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% if (result.length != 0) { %>
+    <h1>Lista de grupos cadastrados no zabbix</h1>
+    <ul>
+      <% result.forEach(function(val) { %>
+        <li>Group: <%= val.name %> com ID <%= val.groupid %>
+      <% }) %>
+    </ul>
+    <% } %>
+    <% if (result.length === 0) { %>
+      <h1>Nenhum valor foi encontrado</h1>
+    <% } %>
+  </body>
+</html>
